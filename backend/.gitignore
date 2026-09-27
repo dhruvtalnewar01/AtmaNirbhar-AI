@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+uploads/*
+!uploads/.gitkeep
+*.mp4
+*.mov
+*.avi
+.venv/
+venv/
+dist/
+*.egg-info/
+yolo11s.pt
+yolo11n.pt
+app/models/yolo11s.pt
+!app/models/yolo11n-autorickshaw.pt

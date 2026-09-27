@@ -1,0 +1,74 @@
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+/lib/
+/lib64/
+!frontend/src/lib/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Next.js & Frontend Node Dependencies
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+node_modules/
+.next/
+*.tsbuildinfo
+next-env.d.ts
+
+# Large Training Datasets, Caches & Run Dumps
+backend/runs/
+backend/data/
+*.cache
+backend/uploads/*
+!backend/uploads/.gitkeep
+*.tar
+*.tar.gz
+*.zip
+*.7z
+
+# Large Standard Downloadable Model Weights (Ultralytics auto-downloads COCO weights)
+backend/yolo11s.pt
+backend/yolo11n.pt
+backend/app/models/yolo11s.pt
+
+# Allow fine-tuned custom weights
+!backend/app/models/yolo11n-autorickshaw.pt
+
+# Temporary and Cache Files
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+design-system/
+
+# Environment and Secret Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+frontend/.env.local

@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/*
+ * SARTHI Vision Luxury Perception Design System v2.0
+ * Palette: Warm Ivory (#F7F1EA) & Rich Cherry (#670626)
+ * Aesthetic: High-end Automotive / Aerospace Deep Perception Console
+ */
+
+:root {
+  /* --- Core Brand Tokens --- */
+  --color-cherry: #670626;
+  --color-cherry-dark: #3F0317;
+  --color-cherry-rich: #7F0B32;
+  --color-cherry-glow: #A31243;
+  --color-cherry-vibrant: #D11D56;
+
+  --color-ivory: #F7F1EA;
+  --color-ivory-cream: #FFFDF9;
+  --color-ivory-muted: #D8CCC0;
+  --color-ivory-subtle: #9E8F81;
+
+  /* --- Surface Tokens (Deep Obsidian Wine) --- */
+  --color-background: #0C0306;
+  --color-background-secondary: #14050B;
+  --color-background-tertiary: #1C0811;
+
+  --color-card: rgba(28, 8, 17, 0.75);
+  --color-card-elevated: rgba(38, 12, 24, 0.88);
+  --color-card-border: rgba(103, 6, 38, 0.45);
+  --color-card-border-subtle: rgba(247, 241, 234, 0.12);
+
+  --color-primary: #670626;
+  --color-on-primary: #F7F1EA;
+  --color-accent: #A31243;
+  --color-foreground: #F7F1EA;
+  --color-muted: #240A15;
+  --color-muted-foreground: #C9BAAB;
+  --color-border: rgba(103, 6, 38, 0.4);
+
+  /* --- Status / Risk (Harmonized) --- */
+  --color-danger: #EF4444;
+  --color-danger-glow: rgba(239, 68, 68, 0.35);
+  --color-warning: #F59E0B;
+  --color-warning-glow: rgba(245, 158, 11, 0.35);
+  --color-success: #10B981;
+  --color-success-glow: rgba(16, 185, 129, 0.35);
+
+  /* --- Typography --- */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* --- Transitions & Radii --- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-full: 9999px;
+
+  --transition-smooth: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- Global Reset & Background Texture --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-ivory);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(103, 6, 38, 0.3), transparent),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(63, 3, 23, 0.25), transparent);
+  background-attachment: fixed;
+}
+
+/* Subtle Geometric Matrix Grid */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(247, 241, 234, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(247, 241, 234, 0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Typography Classes --- */
+.font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* --- Luxury Glass Cards --- */
+.glass-card {
+  background: var(--color-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+  transition: all var(--transition-smooth);
+}
+
+.glass-card:hover {
+  border-color: rgba(163, 18, 67, 0.55);
+  box-shadow: 0 12px 40px -8px rgba(103, 6, 38, 0.35);
+}
+
+.glass-card-elevated {
+  background: var(--color-card-elevated);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(127, 11, 50, 0.5);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 48px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Buttons --- */
+.btn-cherry {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #7F0B32 0%, #670626 50%, #4D031B 100%);
+  color: var(--color-ivory);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(247, 241, 234, 0.25);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(103, 6, 38, 0.45);
+  transition: all var(--transition-smooth);
+}
+
+.btn-cherry:hover {
+  background: linear-gradient(135deg, #9C0E3E 0%, #7F0B32 50%, #670626 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 25px rgba(163, 18, 67, 0.55);
+  border-color: rgba(247, 241, 234, 0.45);
+}
+
+.btn-ivory {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: #F7F1EA;
+  color: #3F0317;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(247, 241, 234, 0.2);
+  transition: all var(--transition-smooth);
+}
+
+.btn-ivory:hover {
+  background: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 25px rgba(247, 241, 234, 0.35);
+}
+
+.btn-glass {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: rgba(40, 12, 25, 0.5);
+  color: var(--color-ivory);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid rgba(103, 6, 38, 0.5);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-smooth);
+}
+
+.btn-glass:hover {
+  background: rgba(63, 16, 38, 0.7);
+  border-color: rgba(247, 241, 234, 0.3);
+  color: #FFFFFF;
+}
+
+/* --- Risk Badges --- */
+.risk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.risk-badge-high {
+  background: rgba(239, 68, 68, 0.18);
+  color: #FF708F;
+  border: 1px solid rgba(239, 68, 68, 0.45);
+}
+
+.risk-badge-moderate {
+  background: rgba(245, 158, 11, 0.18);
+  color: #FCD34D;
+  border: 1px solid rgba(245, 158, 11, 0.45);
+}
+
+.risk-badge-low {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6EE7B7;
+  border: 1px solid rgba(16, 185, 129, 0.45);
+}
+
+/* --- Status Indicators --- */
+.status-moving {
+  color: #FF8BA7;
+}
+
+.status-moving::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #E6194B;
+  margin-right: 6px;
+  box-shadow: 0 0 8px #E6194B;
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+.status-stationary {
+  color: #A7F3D0;
+}
+
+.status-stationary::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+  margin-right: 6px;
+  box-shadow: 0 0 8px #10B981;
+}
+
+/* --- Upload Drop Zone --- */
+.upload-zone-luxury {
+  position: relative;
+  border: 2px dashed rgba(127, 11, 50, 0.5);
+  border-radius: var(--radius-xl);
+  padding: 48px 32px;
+  text-align: center;
+  background: rgba(24, 7, 15, 0.6);
+  backdrop-filter: blur(16px);
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+
+.upload-zone-luxury:hover,
+.upload-zone-luxury.dragover {
+  border-color: #A31243;
+  background: rgba(45, 12, 27, 0.7);
+  box-shadow: 0 0 35px rgba(103, 6, 38, 0.35);
+}
+
+/* --- Confidence Slider --- */
+.confidence-slider-cherry {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #2D0C1B;
+  border-radius: var(--radius-full);
+  outline: none;
+  transition: background var(--transition-smooth);
+}
+
+.confidence-slider-cherry::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #F7F1EA;
+  border: 2px solid #670626;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(247, 241, 234, 0.5);
+  transition: all 150ms ease;
+}
+
+.confidence-slider-cherry::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: #FFFFFF;
+  box-shadow: 0 0 16px rgba(247, 241, 234, 0.8);
+}
+
+/* --- Animations --- */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes collision-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(239, 68, 68, 0.6);
+  }
+}
+
+.animate-float {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s ease-out both;
+}
+
+.animate-collision-pulse {
+  animation: collision-pulse 1.2s ease-in-out infinite;
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0C0306;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3F0E20;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #670626;
+}
