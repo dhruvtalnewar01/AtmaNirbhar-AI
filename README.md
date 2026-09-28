@@ -11,7 +11,7 @@
   [![PyTorch: 2.0+](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
   [![YOLO: 11](https://img.shields.io/badge/YOLO11-Real--Time-00FFFF?style=for-the-badge&logo=ultralytics&logoColor=black)](https://ultralytics.com/)
   [![Edge Latency: <45ms](https://img.shields.io/badge/Edge_Latency-%3C45ms-00FF66?style=for-the-badge&logo=nvidia&logoColor=white)](docs/BENCHMARKS.md)
-  [![Smart India Hackathon](https://img.shields.io/badge/SIH_2026-Grand_Finalist-FF9933?style=for-the-badge&logo=gov.in&logoColor=white)](https://sih.gov.in)
+  [![Platform: Edge AI](https://img.shields.io/badge/Platform-Edge_AI_Robotics-FF9933?style=for-the-badge&logo=nvidia&logoColor=white)](https://github.com/dhruvtalnewar01/AtmaNirbhar-AI)
 
   <p align="center">
     <strong>A decentralized, multi-agent edge perception and real-time replanning intelligence engine engineered specifically for the extreme entropy, unstructured roadways, and chaotic multi-modal traffic of India.</strong>
@@ -344,7 +344,7 @@ AtmaNirbhar AI synthesizes state-of-the-art breakthroughs across computer vision
 - **YAMNet (AudioSet)**: MobileNet-based acoustic event recognition.
 - **Depth-Anything-V2**: Foundation models for robust monocular depth estimation.
 - **ByteTrack**: Multi-object tracking by associating every detection box.
-- **Smart India Hackathon 2026**: Developed under Problem Statement **26037**.
+- **Autonomous Mobility Initiative**: Developed for high-entropy unstructured road navigation and safety.
 
 ---
 
