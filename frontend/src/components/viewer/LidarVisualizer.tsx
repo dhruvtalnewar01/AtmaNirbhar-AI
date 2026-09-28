@@ -5,21 +5,15 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import type { DetectedObject } from "@/lib/types";
 import {
-  Layers,
-  Camera,
   Eye,
-  Crosshair,
   Zap,
   Info,
   Maximize2,
   Minimize2,
   Radio,
   AlertTriangle,
-  RotateCcw,
   Sparkles,
-  ChevronRight,
   X,
-  Volume2,
 } from "lucide-react";
 
 interface LidarVisualizerProps {
@@ -842,7 +836,7 @@ export default function LidarVisualizer({
             }`}
             title="Overhead tactical 2D/3D traffic view"
           >
-            Bird's Eye
+            {"Bird's Eye"}
           </button>
           <button
             onClick={() => applyCameraPreset("side")}

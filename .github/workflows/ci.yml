@@ -43,7 +43,7 @@ jobs:
       - name: Install Dependencies
         run: |
           cd frontend
-          npm ci
+          npm ci || npm install --no-audit
       - name: Build Production Bundle
         run: |
           cd frontend

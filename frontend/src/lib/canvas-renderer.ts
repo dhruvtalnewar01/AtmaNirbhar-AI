@@ -223,7 +223,7 @@ function drawDetection(
 
   // --- TTC Countdown Badge (when TTC < 5s) ---
   if (obj.ttc_s !== null && obj.ttc_s !== undefined && obj.ttc_s < 5) {
-    drawTTCBadge(ctx, obj.ttc_s, x2, y1, color);
+    drawTTCBadge(ctx, obj.ttc_s, x2, y1);
   }
 
   // --- Motion vector indicator ---
@@ -275,8 +275,7 @@ function drawTTCBadge(
   ctx: CanvasRenderingContext2D,
   ttc: number,
   x: number,
-  y: number,
-  color: string
+  y: number
 ): void {
   const isImminent = ttc < 2;
   const text = `${ttc.toFixed(1)}s`;

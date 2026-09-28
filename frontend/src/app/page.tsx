@@ -42,14 +42,11 @@ import type {
   DetectedObject,
   NearMissEvent,
   AudioEvent,
-  SystemStatus,
-  SignalStatus,
-  PipelineTimings,
 } from "@/lib/types";
 import { SIGNAL_COLORS } from "@/lib/types";
 import { renderFrame, hitTestDetection } from "@/lib/canvas-renderer";
 import LidarVisualizer from "@/components/viewer/LidarVisualizer";
-import { alertEngine, unlockAudio, playUrgentCollisionChime } from "@/lib/audio-alert";
+import { alertEngine, unlockAudio } from "@/lib/audio-alert";
 
 
 const MAX_FILE_SIZE_MB = 50;
@@ -272,7 +269,6 @@ const DEMO_SCENARIOS: Record<
   },
 };
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 export default function Home() {
   const [phase, setPhase] = useState<
